@@ -1,0 +1,21 @@
+{
+  "name": "space exploration",
+  "version": "0.0.1",
+  "description": "this is nasa api to get data of space",
+  "permissions": ["activeTab", "tabs", "browsingData", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "author": "IM",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "clear storage"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "manifest_version": 3
+}
